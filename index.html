@@ -367,108 +367,28 @@ const IMDB_DATA = {
   110:{imdbID:"tt0060827",imdbRating:"8.0",director:"Ingmar Bergman",actors:"Bibi Andersson, Liv Ullmann, Margaretha Krook",runtime:"83 min",genre:"Drama, Thriller",awards:"3 wins & 1 nomination total"}
 };
 
-const POSTER_PATHS = {
-  1:"/4911T5FbGnsBUQtu1jocZvG3SnM.jpg",
-  2:"/nPTjj6ZfBXXBwOhd7iN3j5IRByD.jpg",
-  3:"/iIRjMG2tixOIhHKjOh5BRWz3wXB.jpg",
-  4:"/fZ3fOPsjyvnGj3YWK5paFnMbHfK.jpg",
-  5:"/lFCumYTNnlBCMQiYMbMjBUBqc3j.jpg",
-  6:"/oMISqEByFnGE4GbhaMlgwfB8WcO.jpg",
-  7:"/cwBq0onfmeilU5xgqNNjJAMPfpw.jpg",
-  8:"/q33TwMKV7PjAAXmid0kJwYMXhIE.jpg",
-  9:"/xGPVhCr5eGWbOFNrbavydyjIFXs.jpg",
-  10:"/tRbbGiLbBqTU3I6rpMkLh4BwO15.jpg",
-  11:"/bSdCkMPxjVzHqIBVozyH3jW7pMZ.jpg",
-  12:"/f4FF18ia7yTvHf2izNrHqBmgH3V.jpg",
-  13:"/6gbZB8JMNajJfMZGFqGMfvYLTGN.jpg",
-  14:"/5Joh0PBm07FJoUFI5yzBFKkIgJD.jpg",
-  15:"/3QISJ4RE7slxV3EjyNUDOqJEoND.jpg",
-  16:"/yUm6E9tNlVpBUvJmdaWoGE6DVLQ.jpg",
-  17:"/wLBSPYKDfVMDIQi5h1mTrG0GWWM.jpg",
-  18:"/r57bFLlPJKvXB0M0eoV8UNHhRiH.jpg",
-  19:"/iK7OyZVd90Fqj6wGaIqIfRaBJFR.jpg",
-  20:"/3GBOlRMBaXPwSbqWblYOMvPhkJH.jpg",
-  21:"/3pyE6ZMPkMzFeCarBh3EIRoGPEG.jpg",
-  22:"/rOBwFhOzMBBLaJE3bK0VkiSJrgH.jpg",
-  23:"/xhJBiIsf4hMYjN6RKd5eTBqkxwE.jpg",
-  24:"/1pIyT8sXfLolNdBstLIIqXbkLZH.jpg",
-  25:"/kjbz7BgXAmLWL2j3sAfMPGR9kJu.jpg",
-  26:"/9Kg0GVwMFhBJdCMay4YHuNMOKB5.jpg",
-  27:"/tTfnd2VrlaGFSv0LSfpLcMBe6sG.jpg",
-  28:"/kPw33YVCe3UoJSEYPdJl1dvkflK.jpg",
-  29:"/aBXA7yT2fqME2xFAdlGiETiPriu.jpg",
-  30:"/xZLMzoiCAT5wnPp4fkZj6K8jzXj.jpg",
-  31:"/u9tnYfpEKONx4gJanHaUFvGDFRi.jpg",
-  32:"/6QMSLvU5ziIL2T6VrkaKzN2YkGY.jpg",
-  33:"/dKxkwAJLdKbY0gfOtYIasmMMatl.jpg",
-  34:"/4OY5OIGHdWh3cNnNJfzHDqAx0X8.jpg",
-  35:"/8Ym7uK1BHaW9kVpSUNJPcRLjj8w.jpg",
-  36:"/gTj0tZjBRfVaoVOBqBD2xbCxElN.jpg",
-  37:"/hb86MzBGErpi4EjhFNFBxCw2lgk.jpg",
-  38:"/j6rVWUGNVEFoK9UKNnPnxoMMIGZ.jpg",
-  39:"/pIbTaJTDhkIHDTeuYfagswdCzvw.jpg",
-  40:"/80t1XkqbxeECFPl0a0xUMJhFBxf.jpg",
-  41:"/cnPnYQ2u7bKmmYND1bZVkXkEu2L.jpg",
-  42:"/sAaOqCm3FqP7FzG8XOBGumzAnZi.jpg",
-  43:"/dByGG3F9G3WAIXqfZfAvJxEHsyE.jpg",
-  44:"/pLMnBTfRwjRUenMcnMau7LCmbXq.jpg",
-  45:"/5vJGrJbHLGuR7WPq8Bv4fjPivxl.jpg",
-  46:"/p6SZyXqTuFnRNimkPLrGfFR8hsv.jpg",
-  47:"/3bqKn0ZITijqBpWiS12dQFNEWcf.jpg",
-  48:"/fYbXPwOAMCnVlo34KvOaAFjhLT8.jpg",
-  50:"/4d2iEGNqnFQR0FTjGiKPqAP8gFC.jpg",
-  51:"/dSJpJL31V0MxGg59rjDDDPsv9jX.jpg",
-  52:"/s1p7JJ8CcJHIxAYNzjTbkVSdDjN.jpg",
-  53:"/mbN9JfGNBT7fyBs8hzDi1IT9K1b.jpg",
-  54:"/kGVoFm1MaHC3GcgtfePLvMBDhD8.jpg",
-  55:"/iYGrpcFhvNmWwUVyaXzviSckKSR.jpg",
-  56:"/wJKFLhLDz4nMeYbfGBBHPVelJZi.jpg",
-  57:"/lcuFMmLjkFPAaIf6g48WJbXkVlR.jpg",
-  58:"/s2HCMvhhqaWEdWj5dNHDdjRf03a.jpg",
-  59:"/kNPLIp4IKXsH9WlmKVF5553fMbz.jpg",
-  60:"/2lrCU4pViMqV8RPLfIZfEjOi1xW.jpg",
-  61:"/hMH3kAfLqEMucnPnz0FjVsntmSB.jpg",
-  62:"/dSjB8aBqaHbPBJhHzNDbWPKghIk.jpg",
-  63:"/1FMJxQnDBMEdIR4FTKwPJvTJUo6.jpg",
-  64:"/6VhIc7QLViaB84I2q8C5iCKK5bJ.jpg",
-  65:"/sJMfEMEv8oP7fVHMuEjdvfWae4r.jpg",
-  66:"/87Pu1Z0fQfSvHCmKLxLNzB5bwBc.jpg",
-  67:"/4LWDTYtyNloiLw1W98vOyj2YXUv.jpg",
-  68:"/dm06L9pxDOL9jNSK4Cb6y139rrG.jpg",
-  69:"/kNdGvVGyFRMKuYgMolljQekMfni.jpg",
-  70:"/jTswp6KyDYKtvC52GbHagrZbGvD.jpg",
-  71:"/vxK1v7VQIbFUhMq0BLDQ1oEsDAt.jpg",
-  72:"/3UJlVFV7ysLDMf3nDXSrG1YJORL.jpg",
-  73:"/dREyd39My6cHDRXfrVbMiZuJqGS.jpg",
-  74:"/ziKMEj3AajGBEfXiDOC3bbyRuaF.jpg",
-  75:"/tYSb0wMBU4VcKBRCfEWs9mznUJt.jpg",
-  76:"/6ojHVUg0R4FRFOaaNOFNYNPRJFy.jpg",
-  77:"/3IGbjGJgkjDMiP5MBRN9OD7jRrG.jpg",
-  78:"/h2uSRQXmfnpGJuMdWjqHU1VDQ0P.jpg",
-  79:"/rYiiVEXDKhBZPPnhLqJmEMpNuLx.jpg",
-  80:"/yqpYnl9QiG7rMBlKExke8OoHgDp.jpg",
-  81:"/lPjrR5jPOPNMDaHlFaxP3NUPNQL.jpg",
-  82:"/azJhjfRwxHi0UBpXhGafBs2IFvZ.jpg",
-  83:"/4S5C1iHnJhLc8SG4C5Gwn7u1faa.jpg",
-  84:"/qQKbwqVHNKvAGkYKUPxh5jKBGKT.jpg",
-  85:"/qjOjrbAXPd1GjE2Qi8TZTRZAjFW.jpg",
-  86:"/xRIo0jFgWpSFaNHFH9rJvL7gIAx.jpg",
-  87:"/dfh2TJnOwy0OGNjGfM3NxZI4hqJ.jpg",
-  88:"/7ABfCMnUq2XGtJ5kfkXRjcidVi3.jpg",
-  89:"/4UGl9SRFfLW7ikXYue9t4dW1tBF.jpg",
-  90:"/a5BZ9FLMhdU2kh8MWOL4gsPHPHZ.jpg",
-  91:"/c4Kmi3BPp1QIhcXR2r20fnR5t0v.jpg",
-  93:"/5pJEUx8dGLIPJWNALr6bJJVzkS0.jpg",
-  94:"/fRd8aQv0bDVfpuTkb5jMAi9tuyc.jpg",
-  95:"/8dQ0ooYuBawBzfj1mP9Gsfr3I8o.jpg",
-  97:"/gnADnfLb26x0WXMfmXNaDGgQDwj.jpg",
-  99:"/xHsz2oQvdUxT0FfgHMjCfiT8ZWg.jpg",
-  100:"/q8j5bKmPGMFcljxBEZbJbncRMhE.jpg",
-  103:"/vSBwHiCfYIVoQjr3K3YXvkMvxZS.jpg",
-  107:"/yM6JFBNIp6tVSOsTICXtTJYkd22.jpg",
-  109:"/95GxXgVITcn5jFPsfl3mIqdAbyT.jpg",
-  110:"/k8Ql2vXIZMwfUXRMJbNJsgPnWSd.jpg"
-};
+const TMDB_KEY="559ef900bdb1f0b65914e7e8ddd80e0c";
+const TMDB_SEARCH="https://api.themoviedb.org/3/search/movie";
+const posterCache={};
+async function fetchPoster(title,year){
+  const key=title+"_"+year;
+  if(posterCache[key]!==undefined)return posterCache[key];
+  try{
+    const r=await fetch(TMDB_SEARCH+"?api_key="+TMDB_KEY+"&query="+encodeURIComponent(title)+"&year="+year+"&language=en-US");
+    const d=await r.json();
+    if(d.results&&d.results.length>0&&d.results[0].poster_path){
+      posterCache[key]=TMDB_BASE+d.results[0].poster_path;
+    }else{posterCache[key]=null;}
+  }catch(e){posterCache[key]=null;}
+  return posterCache[key];
+}
+async function prefetchAllPosters(){
+  const batch=6;
+  for(let i=0;i<films.length;i+=batch){
+    await Promise.all(films.slice(i,i+batch).map(f=>fetchPoster(f.title,f.year)));
+    render();
+  }
+}
 
 const TMDB_BASE='https://image.tmdb.org/t/p/w300';
 
@@ -612,21 +532,22 @@ function saveLocal(){
 }
 
 function renderPosterAndDesc(film, detail){
-  const posterPath = POSTER_PATHS[film.id];
-  if(posterPath){
-    const posterRow=h("div",{className:"flex gap-12",style:{marginBottom:"10px"}});
-    const img=h("img",{src:TMDB_BASE+posterPath,alt:film.title,style:{width:"90px",borderRadius:"8px",flexShrink:"0",boxShadow:"0 2px 10px rgba(0,0,0,0.3)",objectFit:"cover"}});
-    img.onerror=function(){this.style.display="none";};
-    posterRow.appendChild(img);
-    const textCol=h("div",{style:{flex:"1",minWidth:"0"}});
-    textCol.appendChild(h("p",{style:{fontSize:"14px",lineHeight:"1.6",color:"var(--sub)",margin:"0 0 6px"}},film.description));
-    textCol.appendChild(h("span",{style:{fontSize:"11px",color:"var(--sub)"}},`🎭 ${film.mood}`));
-    posterRow.appendChild(textCol);
-    detail.appendChild(posterRow);
-  } else {
-    detail.appendChild(h("p",{style:{fontSize:"14px",lineHeight:"1.6",color:"var(--sub)",marginBottom:"8px"}},film.description));
-    detail.appendChild(h("span",{style:{fontSize:"11px",color:"var(--sub)"}},`🎭 ${film.mood}`));
+  const url=posterCache[film.title+"_"+film.year];
+  const row=h("div",{className:"flex gap-12",style:{marginBottom:"10px"}});
+  if(url){
+    const img=h("img",{src:url,alt:film.title,style:{width:"90px",borderRadius:"8px",flexShrink:"0",boxShadow:"0 2px 10px rgba(0,0,0,0.3)",objectFit:"cover"}});
+    img.onerror=function(){this.style.display="none"};
+    row.appendChild(img);
+  }else if(url===null){
+    row.appendChild(h("div",{style:{width:"90px",height:"135px",borderRadius:"8px",flexShrink:"0",background:"var(--card)",display:"flex",alignItems:"center",justifyContent:"center",fontSize:"28px",border:"1px dashed var(--border)"}},"\ud83c\udfac"));
+  }else{
+    row.appendChild(h("div",{style:{width:"90px",height:"135px",borderRadius:"8px",flexShrink:"0",background:"var(--card)",display:"flex",alignItems:"center",justifyContent:"center",fontSize:"11px",color:"var(--muted)",border:"1px dashed var(--border)"}},"..."));
   }
+  const textCol=h("div",{style:{flex:"1",minWidth:"0"}});
+  textCol.appendChild(h("p",{style:{fontSize:"14px",lineHeight:"1.6",color:"var(--sub)",margin:"0 0 6px"}},film.description));
+  textCol.appendChild(h("span",{style:{fontSize:"11px",color:"var(--sub)"}},"Mood: "+film.mood));
+  row.appendChild(textCol);
+  detail.appendChild(row);
 }
 
 function toggleWatched(id){
@@ -1096,6 +1017,7 @@ try{
 }catch(e){}
 if(!state.dark)document.body.classList.add("light");
 render();
+setTimeout(prefetchAllPosters, 800);
 </script>
 </body>
 </html>
