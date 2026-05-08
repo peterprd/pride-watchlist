@@ -366,6 +366,112 @@ const IMDB_DATA = {
   109:{imdbID:"tt0057490",imdbRating:"7.8",director:"Joseph Losey",actors:"Dirk Bogarde, James Fox, Sarah Miles",runtime:"112 min",genre:"Drama",awards:"3 wins & 5 nominations total"},
   110:{imdbID:"tt0060827",imdbRating:"8.0",director:"Ingmar Bergman",actors:"Bibi Andersson, Liv Ullmann, Margaretha Krook",runtime:"83 min",genre:"Drama, Thriller",awards:"3 wins & 1 nomination total"}
 };
+
+const POSTER_PATHS = {
+  1:"/4911T5FbGnsBUQtu1jocZvG3SnM.jpg",
+  2:"/nPTjj6ZfBXXBwOhd7iN3j5IRByD.jpg",
+  3:"/iIRjMG2tixOIhHKjOh5BRWz3wXB.jpg",
+  4:"/fZ3fOPsjyvnGj3YWK5paFnMbHfK.jpg",
+  5:"/lFCumYTNnlBCMQiYMbMjBUBqc3j.jpg",
+  6:"/oMISqEByFnGE4GbhaMlgwfB8WcO.jpg",
+  7:"/cwBq0onfmeilU5xgqNNjJAMPfpw.jpg",
+  8:"/q33TwMKV7PjAAXmid0kJwYMXhIE.jpg",
+  9:"/xGPVhCr5eGWbOFNrbavydyjIFXs.jpg",
+  10:"/tRbbGiLbBqTU3I6rpMkLh4BwO15.jpg",
+  11:"/bSdCkMPxjVzHqIBVozyH3jW7pMZ.jpg",
+  12:"/f4FF18ia7yTvHf2izNrHqBmgH3V.jpg",
+  13:"/6gbZB8JMNajJfMZGFqGMfvYLTGN.jpg",
+  14:"/5Joh0PBm07FJoUFI5yzBFKkIgJD.jpg",
+  15:"/3QISJ4RE7slxV3EjyNUDOqJEoND.jpg",
+  16:"/yUm6E9tNlVpBUvJmdaWoGE6DVLQ.jpg",
+  17:"/wLBSPYKDfVMDIQi5h1mTrG0GWWM.jpg",
+  18:"/r57bFLlPJKvXB0M0eoV8UNHhRiH.jpg",
+  19:"/iK7OyZVd90Fqj6wGaIqIfRaBJFR.jpg",
+  20:"/3GBOlRMBaXPwSbqWblYOMvPhkJH.jpg",
+  21:"/3pyE6ZMPkMzFeCarBh3EIRoGPEG.jpg",
+  22:"/rOBwFhOzMBBLaJE3bK0VkiSJrgH.jpg",
+  23:"/xhJBiIsf4hMYjN6RKd5eTBqkxwE.jpg",
+  24:"/1pIyT8sXfLolNdBstLIIqXbkLZH.jpg",
+  25:"/kjbz7BgXAmLWL2j3sAfMPGR9kJu.jpg",
+  26:"/9Kg0GVwMFhBJdCMay4YHuNMOKB5.jpg",
+  27:"/tTfnd2VrlaGFSv0LSfpLcMBe6sG.jpg",
+  28:"/kPw33YVCe3UoJSEYPdJl1dvkflK.jpg",
+  29:"/aBXA7yT2fqME2xFAdlGiETiPriu.jpg",
+  30:"/xZLMzoiCAT5wnPp4fkZj6K8jzXj.jpg",
+  31:"/u9tnYfpEKONx4gJanHaUFvGDFRi.jpg",
+  32:"/6QMSLvU5ziIL2T6VrkaKzN2YkGY.jpg",
+  33:"/dKxkwAJLdKbY0gfOtYIasmMMatl.jpg",
+  34:"/4OY5OIGHdWh3cNnNJfzHDqAx0X8.jpg",
+  35:"/8Ym7uK1BHaW9kVpSUNJPcRLjj8w.jpg",
+  36:"/gTj0tZjBRfVaoVOBqBD2xbCxElN.jpg",
+  37:"/hb86MzBGErpi4EjhFNFBxCw2lgk.jpg",
+  38:"/j6rVWUGNVEFoK9UKNnPnxoMMIGZ.jpg",
+  39:"/pIbTaJTDhkIHDTeuYfagswdCzvw.jpg",
+  40:"/80t1XkqbxeECFPl0a0xUMJhFBxf.jpg",
+  41:"/cnPnYQ2u7bKmmYND1bZVkXkEu2L.jpg",
+  42:"/sAaOqCm3FqP7FzG8XOBGumzAnZi.jpg",
+  43:"/dByGG3F9G3WAIXqfZfAvJxEHsyE.jpg",
+  44:"/pLMnBTfRwjRUenMcnMau7LCmbXq.jpg",
+  45:"/5vJGrJbHLGuR7WPq8Bv4fjPivxl.jpg",
+  46:"/p6SZyXqTuFnRNimkPLrGfFR8hsv.jpg",
+  47:"/3bqKn0ZITijqBpWiS12dQFNEWcf.jpg",
+  48:"/fYbXPwOAMCnVlo34KvOaAFjhLT8.jpg",
+  50:"/4d2iEGNqnFQR0FTjGiKPqAP8gFC.jpg",
+  51:"/dSJpJL31V0MxGg59rjDDDPsv9jX.jpg",
+  52:"/s1p7JJ8CcJHIxAYNzjTbkVSdDjN.jpg",
+  53:"/mbN9JfGNBT7fyBs8hzDi1IT9K1b.jpg",
+  54:"/kGVoFm1MaHC3GcgtfePLvMBDhD8.jpg",
+  55:"/iYGrpcFhvNmWwUVyaXzviSckKSR.jpg",
+  56:"/wJKFLhLDz4nMeYbfGBBHPVelJZi.jpg",
+  57:"/lcuFMmLjkFPAaIf6g48WJbXkVlR.jpg",
+  58:"/s2HCMvhhqaWEdWj5dNHDdjRf03a.jpg",
+  59:"/kNPLIp4IKXsH9WlmKVF5553fMbz.jpg",
+  60:"/2lrCU4pViMqV8RPLfIZfEjOi1xW.jpg",
+  61:"/hMH3kAfLqEMucnPnz0FjVsntmSB.jpg",
+  62:"/dSjB8aBqaHbPBJhHzNDbWPKghIk.jpg",
+  63:"/1FMJxQnDBMEdIR4FTKwPJvTJUo6.jpg",
+  64:"/6VhIc7QLViaB84I2q8C5iCKK5bJ.jpg",
+  65:"/sJMfEMEv8oP7fVHMuEjdvfWae4r.jpg",
+  66:"/87Pu1Z0fQfSvHCmKLxLNzB5bwBc.jpg",
+  67:"/4LWDTYtyNloiLw1W98vOyj2YXUv.jpg",
+  68:"/dm06L9pxDOL9jNSK4Cb6y139rrG.jpg",
+  69:"/kNdGvVGyFRMKuYgMolljQekMfni.jpg",
+  70:"/jTswp6KyDYKtvC52GbHagrZbGvD.jpg",
+  71:"/vxK1v7VQIbFUhMq0BLDQ1oEsDAt.jpg",
+  72:"/3UJlVFV7ysLDMf3nDXSrG1YJORL.jpg",
+  73:"/dREyd39My6cHDRXfrVbMiZuJqGS.jpg",
+  74:"/ziKMEj3AajGBEfXiDOC3bbyRuaF.jpg",
+  75:"/tYSb0wMBU4VcKBRCfEWs9mznUJt.jpg",
+  76:"/6ojHVUg0R4FRFOaaNOFNYNPRJFy.jpg",
+  77:"/3IGbjGJgkjDMiP5MBRN9OD7jRrG.jpg",
+  78:"/h2uSRQXmfnpGJuMdWjqHU1VDQ0P.jpg",
+  79:"/rYiiVEXDKhBZPPnhLqJmEMpNuLx.jpg",
+  80:"/yqpYnl9QiG7rMBlKExke8OoHgDp.jpg",
+  81:"/lPjrR5jPOPNMDaHlFaxP3NUPNQL.jpg",
+  82:"/azJhjfRwxHi0UBpXhGafBs2IFvZ.jpg",
+  83:"/4S5C1iHnJhLc8SG4C5Gwn7u1faa.jpg",
+  84:"/qQKbwqVHNKvAGkYKUPxh5jKBGKT.jpg",
+  85:"/qjOjrbAXPd1GjE2Qi8TZTRZAjFW.jpg",
+  86:"/xRIo0jFgWpSFaNHFH9rJvL7gIAx.jpg",
+  87:"/dfh2TJnOwy0OGNjGfM3NxZI4hqJ.jpg",
+  88:"/7ABfCMnUq2XGtJ5kfkXRjcidVi3.jpg",
+  89:"/4UGl9SRFfLW7ikXYue9t4dW1tBF.jpg",
+  90:"/a5BZ9FLMhdU2kh8MWOL4gsPHPHZ.jpg",
+  91:"/c4Kmi3BPp1QIhcXR2r20fnR5t0v.jpg",
+  93:"/5pJEUx8dGLIPJWNALr6bJJVzkS0.jpg",
+  94:"/fRd8aQv0bDVfpuTkb5jMAi9tuyc.jpg",
+  95:"/8dQ0ooYuBawBzfj1mP9Gsfr3I8o.jpg",
+  97:"/gnADnfLb26x0WXMfmXNaDGgQDwj.jpg",
+  99:"/xHsz2oQvdUxT0FfgHMjCfiT8ZWg.jpg",
+  100:"/q8j5bKmPGMFcljxBEZbJbncRMhE.jpg",
+  103:"/vSBwHiCfYIVoQjr3K3YXvkMvxZS.jpg",
+  107:"/yM6JFBNIp6tVSOsTICXtTJYkd22.jpg",
+  109:"/95GxXgVITcn5jFPsfl3mIqdAbyT.jpg",
+  110:"/k8Ql2vXIZMwfUXRMJbNJsgPnWSd.jpg"
+};
+
+const TMDB_BASE='https://image.tmdb.org/t/p/w300';
+
 const tierConfig = {
   must:{label:"Must-Watch Αριστουργήματα",emoji:"🏆",color:"#FFD700",bg:"rgba(255,215,0,0.08)",border:"rgba(255,215,0,0.3)"},
   excellent:{label:"Εξαιρετικές",emoji:"🌟",color:"#FF6B9D",bg:"rgba(255,107,157,0.08)",border:"rgba(255,107,157,0.3)"},
@@ -503,6 +609,24 @@ async function renameUser(oldName, newName){
 // Local storage only for dark mode preference
 function saveLocal(){
   localStorage.setItem("pride-dark", JSON.stringify(state.dark));
+}
+
+function renderPosterAndDesc(film, detail){
+  const posterPath = POSTER_PATHS[film.id];
+  if(posterPath){
+    const posterRow=h("div",{className:"flex gap-12",style:{marginBottom:"10px"}});
+    const img=h("img",{src:TMDB_BASE+posterPath,alt:film.title,style:{width:"90px",borderRadius:"8px",flexShrink:"0",boxShadow:"0 2px 10px rgba(0,0,0,0.3)",objectFit:"cover"}});
+    img.onerror=function(){this.style.display="none";};
+    posterRow.appendChild(img);
+    const textCol=h("div",{style:{flex:"1",minWidth:"0"}});
+    textCol.appendChild(h("p",{style:{fontSize:"14px",lineHeight:"1.6",color:"var(--sub)",margin:"0 0 6px"}},film.description));
+    textCol.appendChild(h("span",{style:{fontSize:"11px",color:"var(--sub)"}},`🎭 ${film.mood}`));
+    posterRow.appendChild(textCol);
+    detail.appendChild(posterRow);
+  } else {
+    detail.appendChild(h("p",{style:{fontSize:"14px",lineHeight:"1.6",color:"var(--sub)",marginBottom:"8px"}},film.description));
+    detail.appendChild(h("span",{style:{fontSize:"11px",color:"var(--sub)"}},`🎭 ${film.mood}`));
+  }
 }
 
 function toggleWatched(id){
@@ -766,17 +890,12 @@ function render(){
   container.appendChild(catFilters);
   
   // Film groups
-  grouped.forEach(({tier,films:tierFilms})=>{
-    const cfg=tierConfig[tier];
-    const section=h("div",{style:{marginBottom:"32px",width:"100%"}});
-    const sHeader=h("div",{className:"section-header",style:{borderBottom:`1px solid ${cfg.border}`}});
-    sHeader.appendChild(h("span",{style:{fontSize:"22px"}},cfg.emoji));
-    sHeader.appendChild(h("h2",{style:{fontFamily:"'Playfair Display',Georgia,serif",fontSize:"22px",fontWeight:"700",color:cfg.color}},cfg.label));
-    sHeader.appendChild(h("span",{style:{fontSize:"12px",color:"var(--muted)",marginLeft:"auto"}},`${tierFilms.length} ταινίες`));
-    section.appendChild(sHeader);
-    
-    const filmList=h("div",{className:"flex col gap-8",style:{width:"100%"}});
-    tierFilms.forEach(film=>{
+  if(state.selectedTier==="all"){
+    // FLAT LIST sorted by watchOrder
+    const sortedFilms=[...filtered].sort((a,b)=>(a.watchOrder||999)-(b.watchOrder||999));
+    const filmList=h("div",{className:"flex col gap-8",style:{width:"100%",marginBottom:"32px"}});
+    sortedFilms.forEach(film=>{
+      const cfg=tierConfig[film.tier];
       const watched=state.watchedIds.has(film.id);
       const expanded=state.expandedId===film.id;
       const card=h("div",{className:`film-card${watched?" watched":""}`,style:{background:watched?"var(--watched-bg)":cfg.bg,borderColor:watched?"var(--watched-border)":cfg.border},onClick:()=>{state.expandedId=expanded?null:film.id;if(!expanded&&IMDB_DATA[film.id])state.imdbData[film.id]=IMDB_DATA[film.id];render();}});
@@ -792,6 +911,8 @@ function render(){
       const metaRow=h("div",{className:"flex flex-wrap gap-8",style:{marginTop:"3px",alignItems:"center"}});
       metaRow.appendChild(h("span",{className:"tag"},film.category));
       metaRow.appendChild(h("span",{style:{fontSize:"12px",color:"var(--star)",letterSpacing:"1px"}},film.rating));
+      // Tier indicator pill
+      metaRow.appendChild(h("span",{style:{fontSize:"10px",padding:"1px 6px",borderRadius:"5px",background:cfg.color+"18",border:`1px solid ${cfg.color}33`,color:cfg.color,fontWeight:"600"}},`${cfg.emoji} ${cfg.label.split(" ")[0]}`));
       filmInfo.appendChild(metaRow);
       mainRow.appendChild(filmInfo);
       
@@ -801,9 +922,7 @@ function render(){
       
       if(expanded){
         const detail=h("div",{style:{marginTop:"12px",paddingTop:"12px",borderTop:"1px solid var(--border-light)"}});
-        detail.appendChild(h("p",{style:{fontSize:"14px",lineHeight:"1.6",color:"var(--sub)",marginBottom:"8px"}},film.description));
-        detail.appendChild(h("span",{style:{fontSize:"11px",color:"var(--sub)"}},`🎭 ${film.mood}`));
-        
+        renderPosterAndDesc(film, detail);
         const d=state.imdbData[film.id];
         if(d&&!d.error){
           const imdb=h("div",{className:"imdb-box"});
@@ -825,9 +944,70 @@ function render(){
       }
       filmList.appendChild(card);
     });
-    section.appendChild(filmList);
-    container.appendChild(section);
-  });
+    container.appendChild(filmList);
+  } else {
+    // GROUPED by tier
+    grouped.forEach(({tier,films:tierFilms})=>{
+      const cfg=tierConfig[tier];
+      const section=h("div",{style:{marginBottom:"32px",width:"100%"}});
+      const sHeader=h("div",{className:"section-header",style:{borderBottom:`1px solid ${cfg.border}`}});
+      sHeader.appendChild(h("span",{style:{fontSize:"22px"}},cfg.emoji));
+      sHeader.appendChild(h("h2",{style:{fontFamily:"'Playfair Display',Georgia,serif",fontSize:"22px",fontWeight:"700",color:cfg.color}},cfg.label));
+      sHeader.appendChild(h("span",{style:{fontSize:"12px",color:"var(--muted)",marginLeft:"auto"}},`${tierFilms.length} ταινίες`));
+      section.appendChild(sHeader);
+      
+      const filmList=h("div",{className:"flex col gap-8",style:{width:"100%"}});
+      tierFilms.forEach(film=>{
+        const watched=state.watchedIds.has(film.id);
+        const expanded=state.expandedId===film.id;
+        const card=h("div",{className:`film-card${watched?" watched":""}`,style:{background:watched?"var(--watched-bg)":cfg.bg,borderColor:watched?"var(--watched-border)":cfg.border},onClick:()=>{state.expandedId=expanded?null:film.id;if(!expanded&&IMDB_DATA[film.id])state.imdbData[film.id]=IMDB_DATA[film.id];render();}});
+        
+        const mainRow=h("div",{className:"flex gap-12",style:{alignItems:"center"}});
+        if(film.watchOrder)mainRow.appendChild(h("div",{style:{minWidth:"32px",height:"32px",borderRadius:"8px",background:`linear-gradient(135deg,${cfg.color}33,${cfg.color}11)`,border:`1px solid ${cfg.color}44`,display:"flex",alignItems:"center",justifyContent:"center",fontSize:"13px",fontWeight:"700",color:cfg.color}},String(film.watchOrder)));
+        
+        const filmInfo=h("div",{style:{flex:"1",minWidth:"0"}});
+        const titleRow=h("div",{className:"flex flex-wrap gap-8",style:{alignItems:"baseline"}});
+        titleRow.appendChild(h("span",{style:{fontSize:"15px",fontWeight:"700",color:watched?"var(--watched)":"var(--text)",textDecoration:watched?"line-through":"none"}},film.title));
+        titleRow.appendChild(h("span",{style:{fontSize:"12px",color:"var(--muted)"}},`(${film.year})`));
+        filmInfo.appendChild(titleRow);
+        const metaRow=h("div",{className:"flex flex-wrap gap-8",style:{marginTop:"3px",alignItems:"center"}});
+        metaRow.appendChild(h("span",{className:"tag"},film.category));
+        metaRow.appendChild(h("span",{style:{fontSize:"12px",color:"var(--star)",letterSpacing:"1px"}},film.rating));
+        filmInfo.appendChild(metaRow);
+        mainRow.appendChild(filmInfo);
+        
+        const watchBtn=h("button",{style:{width:"36px",height:"36px",borderRadius:"50%",border:watched?`2px solid var(--watched)`:`2px solid var(--filter-border)`,background:watched?"rgba(0,206,209,0.15)":"transparent",cursor:"pointer",display:"flex",alignItems:"center",justifyContent:"center",fontSize:"16px",color:watched?"var(--watched)":"var(--muted)",flexShrink:"0",transition:"all .2s"},onClick:e=>{e.stopPropagation();toggleWatched(film.id);}},watched?"✓":"○");
+        mainRow.appendChild(watchBtn);
+        card.appendChild(mainRow);
+        
+        if(expanded){
+          const detail=h("div",{style:{marginTop:"12px",paddingTop:"12px",borderTop:"1px solid var(--border-light)"}});
+          renderPosterAndDesc(film, detail);
+          const d=state.imdbData[film.id];
+          if(d&&!d.error){
+            const imdb=h("div",{className:"imdb-box"});
+            const imdbHeader=h("div",{className:"flex flex-wrap gap-8",style:{marginBottom:"8px"}});
+            imdbHeader.appendChild(h("span",{className:"imdb-badge"},"IMDb"));
+            if(d.imdbRating&&d.imdbRating!=="N/A")imdbHeader.appendChild(h("span",{style:{fontSize:"14px",fontWeight:"800",color:"#F5C518"}},`⭐ ${d.imdbRating}/10`));
+            imdb.appendChild(imdbHeader);
+            const details=h("div",{className:"flex col",style:{gap:"4px"}});
+            if(d.director&&d.director!=="N/A")details.appendChild(h("div",{style:{fontSize:"12px",color:"var(--sub)"},innerHTML:`<span style="color:var(--muted)">Σκηνοθεσία:</span> ${d.director}`}));
+            if(d.actors&&d.actors!=="N/A")details.appendChild(h("div",{style:{fontSize:"12px",color:"var(--sub)"},innerHTML:`<span style="color:var(--muted)">Ηθοποιοί:</span> ${d.actors}`}));
+            if(d.runtime&&d.runtime!=="N/A")details.appendChild(h("div",{style:{fontSize:"12px",color:"var(--sub)"},innerHTML:`<span style="color:var(--muted)">Διάρκεια:</span> ${d.runtime}`}));
+            if(d.genre&&d.genre!=="N/A")details.appendChild(h("div",{style:{fontSize:"12px",color:"var(--sub)"},innerHTML:`<span style="color:var(--muted)">Είδος:</span> ${d.genre}`}));
+            if(d.awards&&d.awards!=="N/A"&&d.awards!=="")details.appendChild(h("div",{style:{fontSize:"12px",color:"var(--star)",marginTop:"2px"}},`🏆 ${d.awards}`));
+            imdb.appendChild(details);
+            if(d.imdbID)imdb.appendChild(h("a",{className:"imdb-link",href:`https://www.imdb.com/title/${d.imdbID}/`,target:"_blank",rel:"noopener noreferrer",onClick:e=>e.stopPropagation()},"🔗 Δες στο IMDb"));
+            detail.appendChild(imdb);
+          }
+          card.appendChild(detail);
+        }
+        filmList.appendChild(card);
+      });
+      section.appendChild(filmList);
+      container.appendChild(section);
+    });
+  }
   
   // Footer
   const footer=h("div",{className:"center",style:{padding:"32px 0 16px",borderTop:"1px solid var(--border-light)",marginTop:"16px"}});
